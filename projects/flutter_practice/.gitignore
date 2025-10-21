@@ -43,3 +43,8 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+      ../../class-all/
+        ../batch_13/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@1x.png
+        ../batch_13/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@2x.png
+
