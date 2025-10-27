@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_practice/module_9/widget/city_card.dart';
 
 class Class2Stack extends StatelessWidget {
   const Class2Stack({super.key});
@@ -11,58 +12,7 @@ class Class2Stack extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Stack(
-              children: [
-                Container(
-                  height: 200,
-                  width: 300,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(12),
-                    image: DecorationImage(
-                      image: NetworkImage(
-                        'https://upload.wikimedia.org/wikipedia/commons/9/92/Tea_garden_in_Sylhet_%2840349163252%29.jpg',
-                      ),
-                    ),
-                  ),
-                  child: Container(
-                    alignment: Alignment.bottomLeft,
-                    padding: EdgeInsets.all(8),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(12),
-                      gradient: LinearGradient(
-                        begin: Alignment.topCenter,
-                        end: Alignment.bottomCenter,
-                        colors: [Colors.transparent, Colors.black45],
-                      ),
-                    ),
-                  ),
-                ),
-                Positioned(
-                  bottom: 20,
-                  left: 50,
-                  right: 10,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text('Bangladesh',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 18
-                      ),
-                      ),
-                      Text('5.0',
-                      style: TextStyle(
-                        color: Colors.orange,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 18
-                      ),
-                      )
-                    ],
-                  ),
-                ),
-              ],
-            ),
+            CityCard(img: 'https://i0.wp.com/handluggageonly.co.uk/wp-content/uploads/2016/09/IMG_1343.jpg?w=1600&ssl=1', title: 'England', rating: '4.8',),
             SizedBox(height: 10),
             Stack(
               children: [
@@ -121,3 +71,5 @@ class Class2Stack extends StatelessWidget {
     );
   }
 }
+
+

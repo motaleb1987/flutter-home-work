@@ -4,6 +4,7 @@ import 'package:flutter_practice/home.dart';
 import 'package:flutter_practice/module_7/class_2_button.dart';
 import 'package:flutter_practice/module_8/class_1_input.dart';
 import 'package:flutter_practice/module_9/class_2_stack.dart';
+import 'package:flutter_practice/module_9/class_3.dart';
 import 'package:flutter_practice/module_9/listView.dart';
 import 'package:flutter_practice/module_9/theme_test.dart';
 import 'package:flutter_practice/theme/app_theme.dart';
@@ -87,7 +88,7 @@ class MyApp extends StatelessWidget{
      // home: ButtonGrp(),
       //home: FlutterInput(),
       home: ThemeTest(),
-      initialRoute: 'stack',
+      initialRoute: 'widget',
       routes: {
           'login': (context)=>ThemeTest(),
         'home': (context)=>Home(),
@@ -96,6 +97,7 @@ class MyApp extends StatelessWidget{
         'dashboard': (context)=>Dashboard(),
         'list': (context)=>Lview(),
         'stack': (context)=>Class2Stack(),
+        'widget': (context)=>OwnWidget(),
       },
 
     );

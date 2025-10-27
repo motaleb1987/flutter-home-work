@@ -4,6 +4,8 @@ class ThemeTest extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    TextEditingController phoneController=TextEditingController();
+    TextEditingController passwordController=TextEditingController();
     return Scaffold(
       appBar: AppBar(
         title: Text('Theme Test',
@@ -21,6 +23,7 @@ class ThemeTest extends StatelessWidget {
                 ),
             SizedBox(height: 10,),
             TextField(
+              controller: phoneController,
               decoration: InputDecoration(
                 hintText: 'User Name',
                 labelText: 'Your ID'
@@ -29,6 +32,7 @@ class ThemeTest extends StatelessWidget {
             ),
             SizedBox(height: 10,),
             TextField(
+              controller: passwordController,
               decoration: InputDecoration(
                   hintText: 'Password',
                   labelText: 'Password'
@@ -43,7 +47,17 @@ class ThemeTest extends StatelessWidget {
               //     borderRadius: BorderRadius.circular(10)
               //   )
               // ),
-                onPressed: (){}, child: Text('Login'))
+                onPressed: (){
+                  Navigator.pushNamed(context, 'button');
+                }, child: Text('Login')),
+            
+            ElevatedButton(onPressed: (){
+              Navigator.pushNamed(context, 'dashboard', arguments: {
+                'phone': phoneController.text,
+                'password': passwordController.text,
+
+              });
+            }, child: Text('Dashboard'))
           ],
         ),
       ),
