@@ -1,3 +1,4 @@
+import 'package:assignment_2/widget/subject_card.dart';
 import 'package:flutter/material.dart';
 class MyAssignment extends StatelessWidget {
   const MyAssignment({super.key});
@@ -12,37 +13,20 @@ class MyAssignment extends StatelessWidget {
             fontWeight: FontWeight.bold
           ),
         ),
-        backgroundColor: Colors.orange,
+        backgroundColor: Colors.deepPurple,
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
-        child: Stack(
+        child: Column(
           children: [
-            Container(
-              height: 200,
-              width: 250,
-              decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: NetworkImage('https://onlyflutter.com/wp-content/uploads/2024/03/flutter_banner_onlyflutter.png'),
-                    fit: BoxFit.cover,
-                  ),
-                  borderRadius: BorderRadius.circular(10),
-                  color: Colors.grey
-              ),
-            ),
-            Positioned(
-              bottom: 0,
-              child: Row(
+            SubjectCard(),
 
-                children: [
-                  ElevatedButton(onPressed: (){}, child: Text('৫ সিট খালি ')),
-                  ElevatedButton(onPressed: (){}, child: Text('৭ দিন বাকি  '))
-                ],
-              ),
-            )
           ],
+
         ),
       )
     );
   }
 }
+
+

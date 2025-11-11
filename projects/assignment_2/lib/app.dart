@@ -1,3 +1,4 @@
+import 'package:assignment_2/widget.dart';
 import 'package:flutter/material.dart';
 
 import 'assignment2.dart';
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
 
       ),
       title: 'Assignment-2',
-      home: MyAssignment(),
+      home: OwnWidget(),
     );
   }
 }
