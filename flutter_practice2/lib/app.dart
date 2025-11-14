@@ -4,6 +4,7 @@ import 'package:flutter_practice/module_11/tour_image.dart';
 import 'package:flutter_practice/module_11/tour_pkg_fronted.dart';
 import 'package:flutter_practice/module_11/widget/tour_card.dart';
 import 'package:flutter_practice/module_13/api_calling.dart';
+import 'package:flutter_practice/module_13/bmi_calculate.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_practice/home.dart';
@@ -41,7 +42,7 @@ class MyApp extends StatelessWidget{
            // home: ButtonGrp(),
             //home: FlutterInput(),
             home: ThemeTest(),
-            initialRoute: 'api_called',
+            initialRoute: 'bmi_calculate',
             routes: {
                 'login': (context)=>ThemeTest(),
               'home': (context)=>Home(),
@@ -56,6 +57,7 @@ class MyApp extends StatelessWidget{
               'tour_image': (context)=>TourImage(),
               'api_called': (context)=>ApiCalling(),
               //'tour_card': (context)=>TourCard(img: 'https://www.travelandleisure.com/thmb/hFkv-_TfO2wBULCkkSOAZuErMM8=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/TAL-conrad-maldives-rangali-island-MALDIVESHOTELS1024-6dfdeac00fec4f69893e7576b5896da9.jpg', title: 'Bangladesh'),
+              'bmi_calculate': (context)=>CalculatorScreen(),
             },
 
           );
